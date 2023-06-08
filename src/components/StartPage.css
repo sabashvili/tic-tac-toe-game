@@ -1,0 +1,43 @@
+body {
+    background: #3D7AD6;
+}
+
+.tic-tac-toe-main-logo{
+    position: absolute;
+    width: 40vw;
+    height: 40vh;
+    left: 32vw;
+    top: 24vh;
+}
+
+.x-logo-first{
+    position: absolute;
+    left: 14.24%;
+    right: 79.11%;
+    top: 17.58%;
+    bottom: 68.14%;
+}
+
+.o-logo-first{
+    position: absolute;
+    left: 11.66%;
+    right: 72.74%;
+    top: 51.29%;
+    bottom: 19.08%;
+}
+
+.o-logo-second{
+    position: absolute;
+    left: 73.75%;
+    right: 17.78%;
+    top: 14.34%;
+    bottom: 69.57%;
+}
+
+.X-logo-second{
+position: absolute;
+left: 75.91%;
+right: -4.01%;
+top: 59.64%;
+bottom: -2.37%;
+}

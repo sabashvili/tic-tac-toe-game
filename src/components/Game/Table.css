@@ -1,0 +1,8 @@
+.table{
+    width: 700px;
+    height: 700px;
+    background: rgb(235, 10, 10);
+    position: absolute;
+    left: 31.7vw;
+    top: 13.7vh;
+}

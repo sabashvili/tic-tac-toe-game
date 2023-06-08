@@ -1,0 +1,8 @@
+.drawer{
+    width: 226px;
+    height: 226px;
+    border: 2px solid;
+    border-color: rgb(53, 46, 48);
+    background: #28aed6;
+    margin: 1.7px;
+}
