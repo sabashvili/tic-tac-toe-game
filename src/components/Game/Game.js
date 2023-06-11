@@ -5,7 +5,7 @@ import { useState } from "react";
 import X from "../../img/X.svg";
 import O from "../../img/O.svg";
 
-const Game = () => {
+const Game = (props) => {
   const [table, setTable] = useState([
     { drawerNumber: 1, value: "" },
     { drawerNumber: 2, value: "" },
@@ -29,7 +29,6 @@ const Game = () => {
     [3, 5, 7],
   ]);
 
-  const [winner, setWinner] = useState("");
   const [turn, setTurn] = useState("player-1");
 
   const winnerDiscover = (currDrawerNumb) => {
@@ -40,9 +39,9 @@ const Game = () => {
         }
       }
       if (winVariations[i].every((el) => el === "X")) {
-        setWinner("Player-1");
+        props.onDiscoverWinner("Player-1");
       } else if (winVariations[i].every((el) => el === "O")) {
-        setWinner("Player-2");
+        props.onDiscoverWinner("Player-2");
       }
     }
   };
