@@ -12,8 +12,14 @@ function App() {
     setGameStarted(true);
   };
 
+  const nobodyWinnerHandler = (result) => {
+    if (result) {
+      setWinnerName("Nobody is WINNER !!");
+    }
+  };
+
   const winnerDiscoverHandler = (winner) => {
-    setWinnerName(winner);
+    setWinnerName(`${winner} is a WINNER`);
   };
 
   const resetGameHandler = () => {
@@ -23,8 +29,12 @@ function App() {
 
   return (
     <Fragment>
-      {!gameStarted ? <StartPage onStart={startGameHandler} /> : <Game onDiscoverWinner={winnerDiscoverHandler} />}
-      {winnerName && gameStarted ? <WinnerModal closeWinModal={resetGameHandler} winner={`${winnerName} is a WINNER`} /> : ""}
+      {!gameStarted ? (
+        <StartPage onStart={startGameHandler} />
+      ) : (
+        <Game onDiscoverWinner={winnerDiscoverHandler} onNobodyWinner={nobodyWinnerHandler} />
+      )}
+      {winnerName && gameStarted ? <WinnerModal closeWinModal={resetGameHandler} winner={winnerName} /> : ""}
     </Fragment>
   );
 }

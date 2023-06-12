@@ -31,6 +31,10 @@ const Game = (props) => {
 
   const [turn, setTurn] = useState("player-1");
 
+  const nobodyWinner = () => {
+    return winVariations.flat().every((el) => typeof el == "string");
+  };
+
   const winnerDiscover = (currDrawerNumb) => {
     for (let i = 0; i < 8; i++) {
       for (let j = 0; j < 3; j++) {
@@ -45,6 +49,8 @@ const Game = (props) => {
       }
     }
   };
+
+  props.onNobodyWinner(nobodyWinner());
 
   const ChangeTurnHendler = () => {
     if (turn === "player-1") {
